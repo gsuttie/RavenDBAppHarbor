@@ -1,0 +1,16 @@
+﻿@model IEnumerable<RavenDBAppHarbor.Models.Category>
+<ul>
+@foreach (var item in Model)
+{
+    <li>
+        <div class="Name">@item.Name</div>
+        <div class="Url">@item.Description</div>
+        
+        <ul class="Actions">
+            <li>@Html.ActionLink("Edit", "Edit", new { id = item.Id })</li>
+            <li>@Html.ActionLink("Details", "Details", new { id = item.Id })</li>
+            <li>@Html.ActionLink("Delete", "Delete", new { id = item.Id })</li>
+        </ul>
+    </li>
+}
+</ul>

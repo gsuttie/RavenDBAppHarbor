@@ -227,7 +227,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Category\Partial1.cshtml" />
+    <Content Include="Views\Category\CategoryList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Category\Details.cshtml" />
