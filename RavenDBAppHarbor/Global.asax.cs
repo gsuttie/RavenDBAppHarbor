@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using Raven.Abstractions.Data;
 using Raven.Client.Document;
+using RavenDBAppHarbor.Models;
 
 namespace RavenDBAppHarbor
 {
@@ -52,7 +53,7 @@ namespace RavenDBAppHarbor
                 Url = parser.ConnectionStringOptions.Url,
             };
 
-            Store.Initialize();
+            DataDocumentStore.Initialize();
         }
     }
 }

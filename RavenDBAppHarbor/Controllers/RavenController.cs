@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Raven.Client;
+using RavenDBAppHarbor.Models;
 
 namespace RavenDBAppHarbor.Controllers
 {
@@ -13,7 +14,11 @@ namespace RavenDBAppHarbor.Controllers
 
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            RavenSession = MvcApplication.Store.OpenSession();
+            if (filterContext.IsChildAction)
+                return;
+            RavenSession = DataDocumentStore.Instance.OpenSession();
+            base.OnActionExecuting(filterContext);
+
         }
 
         protected override void OnActionExecuted(ActionExecutedContext filterContext)
