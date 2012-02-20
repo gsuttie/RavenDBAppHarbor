@@ -219,18 +219,6 @@
     <Content Include="Views\Shared\_LogOnPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
-    <None Include="_bin_deployableAssemblies\System.Web.Mvc.dll" />
-    <None Include="_bin_deployableAssemblies\System.Web.Http.WebHost.dll" />
-    <None Include="_bin_deployableAssemblies\System.Web.Http.SelfHost.dll" />
-    <None Include="_bin_deployableAssemblies\System.Web.Http.dll" />
-    <None Include="_bin_deployableAssemblies\System.Web.Http.Data.Helpers.dll" />
-    <None Include="_bin_deployableAssemblies\System.Web.Http.Data.EntityFramework.dll" />
-    <None Include="_bin_deployableAssemblies\System.Web.Http.Data.dll" />
-    <None Include="_bin_deployableAssemblies\System.Web.Http.Common.dll" />
-    <None Include="_bin_deployableAssemblies\System.Net.Http.WebRequest.dll" />
-    <None Include="_bin_deployableAssemblies\System.Net.Http.Formatting.dll" />
-    <None Include="_bin_deployableAssemblies\System.Net.Http.dll" />
-    <None Include="_bin_deployableAssemblies\System.Json.dll" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
