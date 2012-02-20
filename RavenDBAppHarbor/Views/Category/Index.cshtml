@@ -1,0 +1,8 @@
+﻿@model IEnumerable<RavenDBAppHarbor.Models.Category>
+@{ ViewBag.Title = "Index"; }
+
+<h2>All Categories</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@{Html.RenderPartial("CategoryList", Model);}
