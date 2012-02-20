@@ -1,22 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 using Raven.Abstractions.Data;
 using Raven.Client.Document;
-using RavenDBAppHarbor.Models;
 
 namespace RavenDBAppHarbor
 {
+    using Raven.Client;
+
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801
 
     public class MvcApplication : System.Web.HttpApplication
     {
 
-        public static DocumentStore Store { get; set; }
+        public static IDocumentStore Store { get; set; }
 
 
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
@@ -43,7 +40,6 @@ namespace RavenDBAppHarbor
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
 
-
             var parser = ConnectionStringParser<RavenConnectionStringOptions>.FromConnectionStringName("RavenDB");
             parser.Parse();
 
@@ -51,9 +47,7 @@ namespace RavenDBAppHarbor
             {
                 ApiKey = parser.ConnectionStringOptions.ApiKey,
                 Url = parser.ConnectionStringOptions.Url,
-            };
-
-            DataDocumentStore.Initialize();
+            }.Initialize();
         }
     }
 }

@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Raven.Client;
-using RavenDBAppHarbor.Models;
 
 namespace RavenDBAppHarbor.Controllers
 {
@@ -16,7 +15,7 @@ namespace RavenDBAppHarbor.Controllers
         {
             if (filterContext.IsChildAction)
                 return;
-            RavenSession = DataDocumentStore.Instance.OpenSession();
+            RavenSession = MvcApplication.Store.OpenSession();
             base.OnActionExecuting(filterContext);
 
         }

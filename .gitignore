@@ -7,3 +7,8 @@ deploy/*
 *.cache
 TestResults/
 packages/
+*.suo
+*.suo
+/RavenDBAppHarbor/bin
+/RavenDBAppHarbor/obj
+/RavenDBAppHarbor/bin
