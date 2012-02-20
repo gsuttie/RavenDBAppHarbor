@@ -10,7 +10,7 @@ namespace RavenDBAppHarbor.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "MVC 4 Demo using RavenDB o";
+            ViewBag.Message = "MVC 4 Demo using RavenDB";
 
             return View();
         }

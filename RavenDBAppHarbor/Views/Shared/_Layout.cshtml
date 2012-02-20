@@ -15,17 +15,18 @@
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here.", "Index", "Home")</p>
+                    <p class="site-title"><a href="http://gregorsuttie.com/" target="_blank">Gregor Suttie's work blog</a></p>
                 </div>
                 <div class="float-right">
                     <section id="login">
-                        @Html.Partial("_LogOnPartial")
+                        @*@Html.Partial("_LogOnPartial")*@
                     </section>
                     <nav>
                         <ul id="menu">
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
                             <li>@Html.ActionLink("About", "About", "Home")</li>
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            <li>@Html.ActionLink("Categories", "Index", "Category")</li>
                         </ul>
                     </nav>
                 </div>
@@ -40,12 +41,11 @@
         <footer>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
+                    <p>&copy; @DateTime.Now.Year - Gregors ASP.NET MVC 4 Application</p>
                 </div>
                 <div class="float-right">
                     <ul id="social">
-                        <li><a href="http://facebook.com" class="facebook">Facebook</a></li>
-                        <li><a href="http://twitter.com" class="twitter">Twitter</a></li>
+                        <li><a href="http://twitter.com/gsuttie" class="twitter">Twitter</a></li>
                     </ul>
                 </div>
             </div>
